@@ -1,0 +1,324 @@
+/*================================================ CSS Font Families ==========================================================*/
+    /*
+        CSS Fonts:
+           The CSS font properties define the font family, boldness, size, and the style of a text.
+    */
+
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+    /*
+        CSS Font Families:
+
+            In CSS, there are two types of font family names:
+               -> generic family - a group of font families with a similar look (like "Serif" or "Monospace")
+               -> font family - a specific font family (like "Times New Roman" or "Arial")
+    */
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+
+    /*
+        Font Family:
+
+            The font family of a text is set with the font-family property.
+
+            The font-family property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on.
+
+            Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+
+            Note: If the name of a font family is more than one word, it must be in quotation marks, like: "Times New Roman".
+
+            More than one font family is specified in a comma-separated list:
+            Example(Specify the font for three paragraphs):
+            -----------------------------------------------
+                .serif {
+                  font-family: "Times New Roman", Times, serif;
+                }
+
+                .sansserif {
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+
+                .monospace {
+                  font-family: "Lucida Console", Courier, monospace;
+                }
+    */
+/*===================================================================================================================================*/
+
+
+
+
+
+/*================================================ CSS Font Style ==========================================================*/
+    /*
+        Font Style:
+
+            The font-style property is mostly used to specify italic text.
+
+            This property has three values:
+               -> normal - The text is shown normally
+               -> italic - The text is shown in italics
+               -> oblique - The text is "leaning" (oblique is very similar to italic, but less supported)
+            Example:
+            --------
+                p.normal {
+                  font-style: normal;
+                }
+
+                p.italic {
+                  font-style: italic;
+                }
+
+                p.oblique {
+                  font-style: oblique;
+                }
+    */
+
+
+
+/*--------------------------------------------------------------*/
+
+
+
+    /*
+        Font Weight:
+           The font-weight property specifies the weight of a font:
+           Example:
+           --------
+                p.normal {
+                  font-weight: normal;
+                }
+
+                p.thick {
+                  font-weight: bold;
+                }
+    */
+
+
+
+/*--------------------------------------------------------------*/
+
+
+
+    /*
+        Font Variant:
+
+            The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+
+            In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+
+            Example:
+            --------
+                p.normal {
+                  font-variant: normal;
+                }
+
+                p.small {
+                  font-variant: small-caps;
+                }
+    */
+/*===================================================================================================================================*/
+
+
+
+
+
+/*================================================ CSS Font Size ==========================================================*/
+    /*
+        Font Size:
+
+            The font-size property sets the size of the text.
+
+            Being able to manage the text size is important in web design. However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.
+
+            Always use the proper HTML tags, like <h1> - <h6> for headings and <p> for paragraphs.
+
+            The font-size value can be an absolute, or relative size.
+
+            Absolute size:
+               -> Sets the text to a specified size
+               -> Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
+              -> Absolute size is useful when the physical size of the output is known
+
+            Relative size:
+               -> Sets the size relative to surrounding elements
+               -> Allows a user to change the text size in browsers
+
+            Note: If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).
+    */
+
+
+
+/*---------------------------------------------------------------------------------*/
+
+
+
+    /*
+        Set Font Size With Pixels:
+
+            Setting the text size with pixels gives us full control over the text size:
+            Example:
+            --------
+                h1 {
+                  font-size: 40px;
+                }
+
+                h2 {
+                  font-size: 30px;
+                }
+
+                p {
+                  font-size: 14px;
+                }
+            
+             Tip: If we use pixels, you can still use the zoom tool to resize the entire page.
+    */
+
+
+
+/*--------------------------------------------------------------------------------------*/
+
+
+
+    /*
+        Set Font Size With Em:
+
+            To allow users to resize the text (in the browser menu), many developers use em instead of pixels.
+
+            1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
+
+            The size can be calculated from pixels to em using this formula: pixels/16=em
+
+            Example:
+            --------
+                h1 {
+                  font-size: 2.5em;   // 40px/16=2.5em //
+                }
+
+                h2 {
+                  font-size: 1.875em;  // 30px/16=1.875em //
+                }
+
+                p {
+                  font-size: 0.875em;   // 14px/16=0.875em //
+                }
+    */
+
+
+
+/*-----------------------------------------------------------------------------*/
+
+
+
+    /*
+        Use a Combination of Percent and Em:
+
+            The solution that works in all browsers, is to set a default font-size in percent for the <body> element:
+            Example:
+            --------
+                body {
+                  font-size: 100%;
+                }
+
+                h1 {
+                  font-size: 2.5em;
+                }
+
+                h2 {
+                  font-size: 1.875em;
+                }
+
+                p {
+                  font-size: 0.875em;
+                }
+    */
+
+
+
+/*-----------------------------------------------------------------------------------*/
+
+
+
+    /*
+        Responsive Font Size:
+
+            The text size can be set with a vw unit, which means the "viewport width".
+
+            That way the text size will follow the size of the browser window:
+
+            Example:
+            --------
+                <h1 style="font-size:10vw">Hello World</h1>
+
+            Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+    */
+/*===================================================================================================================================*/
+
+
+
+
+
+/*================================================ CSS Google Fonts ==========================================================*/
+    /*
+        Google Fonts:
+
+            If we do not want to use any of the standard fonts in HTML, we can use the Google Fonts API to add hundreds of other fonts to our page.
+
+            Just add a stylesheet link and refer to a font family of our choice:
+               
+            Example:
+            --------
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+                    <style>
+                        body {
+                          font-family: "Sofia";
+                          font-size: 22px;
+                        }
+                    </style>
+                </head>
+                <body>
+
+                    <h1>Sofia Font</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+
+                </body>
+                </html>
+    */
+/*===================================================================================================================================*/
+
+
+
+
+/*================================================ Font Shorthand ==========================================================*/
+    /*
+        Font Property:
+
+            To shorten the code, it is also possible to specify all the individual font properties in one property.
+
+            The font property is a shorthand property for:
+               -> font-style
+               -> font-variant
+               -> font-weight
+               -> font-size/line-height
+               -> font-family
+
+            Example(Set some font properties with the shorthand declaration):
+            ----------------------------------------------------------------
+                p.a {
+                  font: 20px Arial, sans-serif;   // The font size is set to 20 pixels, and the font family is Arial //
+                }
+
+                p.b {
+                  font: italic small-caps bold 12px/30px Georgia, serif;   // The font is set to italic and bold, the font size is set to 12 pixels, the line height is set to                                                              30 pixels, and the font family is Georgia //
+                }
+
+            Note: The font-size and font-family values are required. If one of the other values is missing, their default value are used.
+    */
+/*===================================================================================================================================*/

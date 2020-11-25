@@ -1,0 +1,259 @@
+/*===================================================== CSS Layout - float =================================================*/
+    /*
+        The CSS float property specifies how an element should float.
+    */
+
+
+
+/*------------------------------------------------------------*/
+
+
+
+    /*
+        The float Property
+
+            The float property is used for positioning and formatting content e.g. let an image float left to the text in a container.
+
+            The float property can have one of the following values:
+               -> left - The element floats to the left of its container
+               -> right - The element floats to the right of its container
+               -> none - The element does not float (will be displayed just where it occurs in the text). This is default
+               -> inherit - The element inherits the float value of its parent
+
+            In its simplest use, the float property can be used to wrap text around images.
+    */
+
+
+
+/*-----------------------------------------------------------------*/
+
+
+
+    /*
+        Example - float: right;
+
+            The following example specifies that an image should float to the right in a text:
+            Example:
+            --------
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            img {
+                              float: right;
+                            }
+                        </style>
+                    </head>
+                    <body>
+
+                        <p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+                        <p><img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+                    </body>
+                </html>
+    */
+
+
+
+/*-----------------------------------------------------------------*/
+
+
+
+    /*
+        Example - float: left;
+
+            The following example specifies that an image should float to the right in a text:
+            Example:
+            --------
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            img {
+                              float: left;
+                            }
+                        </style>
+                    </head>
+                    <body>
+
+                        <p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+                        <p><img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+                    </body>
+                </html>
+    */
+
+
+
+/*-----------------------------------------------------------------*/
+
+
+
+    /*
+        Example - No float
+
+            In the following example the image will be displayed just where it occurs in the text (float: none;)
+            Example:
+            --------
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            img {
+                              float: none;
+                            }
+                        </style>
+                    </head>
+                    <body>
+
+                        <p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+                        <p><img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+                    </body>
+                </html>
+    */
+/*===================================================================================================================================*/
+
+
+
+
+
+/*===================================================== CSS Layout - clear and clearfix =================================================*/
+    /*
+        The clear Property
+
+            The clear property specifies what elements can float beside the cleared element and on which side.
+
+            The clear property can have one of the following values:
+
+            none - Allows floating elements on both sides. This is default
+            left - No floating elements allowed on the left side
+            right- No floating elements allowed on the right side
+            both - No floating elements allowed on either the left or the right side
+            inherit - The element inherits the clear value of its parent
+            The most common way to use the clear property is after you have used a float property on an element.
+
+            When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.
+
+            The following example clears the float to the left. Means that no floating elements are allowed on the left side (of the div):
+
+            Example:
+            --------
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            .div1 {
+                              float: left;
+                              width: 100px;
+                              height: 50px;
+                              margin: 10px;
+                              border: 3px solid #73AD21;
+                            }
+
+                            .div2 {
+                              border: 1px solid red;
+                            }
+
+                            .div3 {
+                              float: left;
+                              width: 100px;
+                              height: 50px;
+                              margin: 10px;
+                              border: 3px solid #73AD21;
+                            }
+
+                            .div4 {
+                              border: 1px solid red;
+                              clear: left;
+                            }
+                        </style>
+                    </head>
+                    <body>
+
+                        <h2>Without clear</h2>
+                        <div class="div1">div1</div>
+                        <div class="div2">div2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+                        <br><br>
+
+                        <h2>With clear</h2>
+                        <div class="div3">div3</div>
+                        <div class="div4">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+                    </body>
+                </html>
+    */
+
+
+
+/*---------------------------------------------------------------------------*/
+
+
+
+    /*
+        The clearfix Hack
+
+            If an element is taller than the element containing it, and it is floated, it will "overflow" outside of its container:
+
+            Then we can add overflow: auto; to the containing element to fix this problem:
+
+            Example:
+            --------
+                <!DOCTYPE html>
+                <html>
+                    <head>
+                        <style>
+                            div {
+                              border: 3px solid #4CAF50;
+                              padding: 5px;
+                            }
+
+                            .img1 {
+                              float: right;
+                            }
+
+                            .clearfix {
+                              overflow: auto;
+                            }
+
+                            .img2 {
+                              float: right;
+                            }
+                        </style>
+                    </head>
+                    <body>
+
+                        <p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+                        <div>
+                          <img class="img1" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+                        </div>
+
+                        <p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+                        <div class="clearfix">
+                          <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+                        </div>
+
+                    </body>
+                </html>
+
+
+            The overflow: auto clearfix works well as long as we are able to keep control of our margins and padding (else we might see scrollbars). The new, modern clearfix hack however, is safer to use, and the following code is used for most webpages:
+            Example:
+            --------
+                .clearfix::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+    */
+/*===================================================================================================================================*/
